@@ -13,10 +13,10 @@ if wf.getnchannels() != 1 or wf.getsampwidth() != 2 or wf.getcomptype() != "NONE
     print("Audio file must be WAV format mono PCM.")
     sys.exit(1)
 
-# model = Model(lang="en-us")
+model = Model(lang="en-us")
 
 # You can also init model by name or with a folder path
-model = Model(model_path=r"<model path vosk-model-en-us-0.42-gigaspeech>")
+# model = Model(model_path=r"<model path vosk-model-en-us-0.42-gigaspeech>")
 # model = Model("models/en")
 
 rec = KaldiRecognizer(model, wf.getframerate())
